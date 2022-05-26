@@ -29,8 +29,23 @@ public class CheckAttendance {
         else {
             System.out.println("Employee is not present today");
         }
-        System.out.println("Daily wage of an employee is : "+CheckAttendance.wageCalculation(wagePerHour, fullDayHour));
-        System.out.println("Daily wage of a part time employee is : "+CheckAttendance.wageCalculation(wagePerHour, partTimeHour));
-        monthlyWage(workingDays);
+        int wageFullTime=CheckAttendance.wageCalculation(wagePerHour, fullDayHour);
+        int wagePartTime=CheckAttendance.wageCalculation(wagePerHour, partTimeHour);
+        System.out.println("Daily wage of an employee is : "+wageFullTime);
+        System.out.println("Daily wage of a part time employee is : "+wagePartTime);
+      
+        for(int i = 0;i<20;i++)
+        {
+        	
+        	System.out.println("Day "+(i+1)+" wage of daily employee is : "+CheckAttendance.wageCalculation(wagePerHour, fullDayHour));
+        	fullDayHour+=8;
+        	if (fullDayHour >= 100){
+        		break;
+        	}
+        	else {
+        		continue;
+        	}
+        }
+        
 	}
 }
