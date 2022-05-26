@@ -3,7 +3,7 @@ package Attendance;
 public class CheckAttendance {
 	static int wagePerHour = 20;
 	static int fullDayHour = 8;
-	
+	static int partTimeHour = 8;
 	static int wageCalculation(int x,int y)
 	{
 		int ans = x * y;
@@ -22,5 +22,7 @@ public class CheckAttendance {
             System.out.println("Employee is not present today");
         }
         System.out.println("Daily wage of an employee is : "+CheckAttendance.wageCalculation(wagePerHour, fullDayHour));
+        System.out.println("Daily wage of a part time employee is : "+CheckAttendance.wageCalculation(wagePerHour, partTimeHour));
+
 	}
 }
